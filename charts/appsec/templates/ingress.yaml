@@ -3,20 +3,22 @@ kind: Ingress
 metadata:
  name: appsec-ingress
  annotations:
-   cert-manager.io/cluster-issuer: lets-encrypt
+  cert-manager.io/cluster-issuer: lets-encrypt
 spec:
  tls:
- - hosts:
-   - {{ .Values.hostname }}
-   secretName: appsec-ingress-tls
+ - secretName: appsec-ingress-tls
+   hosts:
+     - host: 
+ - secretName: {{ .Values.letsencrypt.secret }}
+   hosts:
+     - host: {{ .Values.hostname.www-name }}
  rules:
- - host: {{.Values.hostname }}
-   http:
-     paths:
-     - backend:
-         service:
-           name: appsec
-           port:
-             number: 80
-       path: /
-       pathType: Prefix
+  - http:
+    paths:
+    - path: /
+      pathType: Prefix
+      backend:
+        service:
+          name: appsec
+          port:
+            number: 80
