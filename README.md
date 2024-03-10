@@ -30,7 +30,8 @@ microk8s status --wait-ready
 #
 MY_EMAIL_ADDRESS="someone@somewhere.net" # REPLACE - used for Let's Encrypt
 APPSEC_TOKEN=cp-67c2... # REPLACE WITH REAL TOKEN from Infinity Portal - Docker simple MANAGED profile token
-APPSEC_HOSTNAME=appsec1493.klaud.online # REPLACE
+APPSEC_HOSTNAME1=cpdemo.win # REPLACE
+APPSEC_HOSTNAME2=www.cpdemo.win # REPLACE
 
 # prepare DNS
 function verifyDns {
@@ -53,7 +54,7 @@ function verifyDns {
 verifyDns
 
 # ready to install
-helm install appsec https://github.com/mkol5222/appsec-chart/releases/download/appsec-0.1.1/appsec-0.1.1.tgz --set cptoken=$APPSEC_TOKEN --set hostname=$APPSEC_HOSTNAME --set letsencrypt.email=$MY_EMAIL_ADDRESS
+helm install appsec https://github.com/jurajp-chp/appsec-chart/releases/download/appsec-0.1.2/appsec-0.1.2.tgz --set cptoken=$APPSEC_TOKEN --set hostname.name=$APPSEC_HOSTNAME1 --set hostname.www-name=$APPSEC_HOSTNAME2 --set letsencrypt.email=$MY_EMAIL_ADDRESS
 
 # monitor appsec and http-01 solver
 k get po --watch
