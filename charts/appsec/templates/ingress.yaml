@@ -11,12 +11,23 @@ spec:
      - {{ .Values.hostname.name }}
      - {{ .Values.hostname.wwwName }}
  rules:
-  - http:
-    paths:
-    - path: /
-      pathType: Prefix
-      backend:
-        service:
-          name: appsec
-          port:
-            number: 80
+  - host: {{ .Values.hostname.name }}
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: appsec
+            port:
+              number: 80
+  - host: {{ .Values.hostname.wwwName }}
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: appsec
+            port:
+              number: 80
