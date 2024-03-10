@@ -1,7 +1,7 @@
 # hostname to publish to
 hostname:
-  - name: "cpdemo.win"
-  - wwwName: "www.cpdemo.win"
+  name: "cpdemo.win"
+  wwwName: "www.cpdemo.win"
 cptoken:
 
 # Lets encrypt cluster issuer
