@@ -18,7 +18,7 @@ spec:
         - name: CPTOKEN
           valueFrom:
             secretKeyRef:
-              name: appsec
+              name: appsec-token
               key: cptoken
         # securityContext:
         #   runAsUser: 0
