@@ -6,12 +6,10 @@ metadata:
   cert-manager.io/cluster-issuer: lets-encrypt
 spec:
  tls:
- - hosts:
-  - {{ .Values.hostname.name }}
-  secretName: {{ .Values.letsencrypt.secret }}
- - hosts:
-  - {{ .Values.hostname.wwwName }}
-  secretName: {{ .Values.letsencrypt.secret }} 
+  - secretName: {{ .Values.letsencrypt.secret }}
+    hosts:
+     - host: {{ .Values.hostname.name }}
+     - host: {{ .Values.hostname.wwwName }}
  rules:
   - http:
     paths:
