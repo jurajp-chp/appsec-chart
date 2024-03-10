@@ -11,7 +11,7 @@ spec:
      - host: {{ .Values.hostname.name }}
  - secretName: {{ .Values.letsencrypt.secret }}
    hosts:
-     - host: {{ .Values.hostname.www-name }}
+     - host: {{ .Values.hostname.wwwName }}
  rules:
   - http:
     paths:

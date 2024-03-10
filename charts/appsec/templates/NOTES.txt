@@ -1,5 +1,4 @@
 
 Enjoy your web app running at:
-    https://{{ .Values.hostname.name }}/ and https://{{ .Values.hostname.www-name }}/
+    https://{{ .Values.hostname.name }}/ and https://{{ .Values.hostname.wwwName }}/
 
-    
