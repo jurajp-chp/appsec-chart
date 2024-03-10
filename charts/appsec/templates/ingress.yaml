@@ -8,8 +8,8 @@ spec:
  tls:
   - secretName: {{ .Values.letsencrypt.secret }}
     hosts:
-     - host: {{ .Values.hostname.name }}
-     - host: {{ .Values.hostname.wwwName }}
+     - {{ .Values.hostname.name }}
+     - {{ .Values.hostname.wwwName }}
  rules:
   - http:
     paths:
@@ -20,4 +20,3 @@ spec:
           name: appsec
           port:
             number: 80
-            
