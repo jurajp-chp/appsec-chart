@@ -10,7 +10,7 @@ spec:
     hosts:
     {{ range $alias, $hostname := .Values.hostname }}
      - host: "{{ $hostname }}"
-    {{ end }}     
+    {{ end }}
  rules:
   {{ range $alias, $hostname := .Values.hostname }}
   - host: "{{ $hostname }}"
@@ -23,4 +23,4 @@ spec:
             name: appsec
             port:
               number: 80
-    {{ end }}   
+  {{ end }}
