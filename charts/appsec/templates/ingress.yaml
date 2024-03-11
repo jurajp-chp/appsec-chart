@@ -9,7 +9,7 @@ spec:
   - secretName: {{ .Values.letsencrypt.secret }}
     hosts:
     {{- range $alias, $hostname := .Values.hostname }}
-     - host: "{{ $hostname }}"
+     - "{{ $hostname }}"
     {{- end }}
  rules:
   {{- range $alias, $hostname := .Values.hostname }}
