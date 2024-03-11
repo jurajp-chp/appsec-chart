@@ -54,7 +54,7 @@ function verifyDns {
 verifyDns
 
 # ready to install
-helm install appsec https://github.com/jurajp-chp/appsec-chart/releases/download/appsec-0.1.2/appsec-0.1.2.tgz --set cptoken=$APPSEC_TOKEN --set hostname.name=$APPSEC_HOSTNAME1 --set hostname.wwwName=$APPSEC_HOSTNAME2 --set letsencrypt.email=$MY_EMAIL_ADDRESS
+helm install appsec https://github.com/jurajp-chp/appsec-chart/releases/download/appsec-0.1.3/appsec-0.1.3.tgz --set cptoken=$APPSEC_TOKEN --set hostname.name1=$APPSEC_HOSTNAME1 hostname.name2=$APPSEC_HOSTNAME2 hostname.name3=$APPSEC_HOSTNAME3 hostname.name4=$APPSEC_HOSTNAME4 --set letsencrypt.email=$MY_EMAIL_ADDRESS
 
 # monitor appsec and http-01 solver
 k get po --watch

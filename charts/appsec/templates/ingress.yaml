@@ -8,10 +8,12 @@ spec:
  tls:
   - secretName: {{ .Values.letsencrypt.secret }}
     hosts:
-     - {{ .Values.hostname.name }}
-     - {{ .Values.hostname.wwwName }}
+    {{ range $alias, $hostname := .Values.hostname }}
+     - host: "{{ $hostname }}"
+    {{ end }}     
  rules:
-  - host: {{ .Values.hostname.name }}
+  {{ range $alias, $hostname := .Values.hostname }}
+  - host: "{{ $hostname }}"
     http:
       paths:
       - path: /
@@ -21,13 +23,4 @@ spec:
             name: appsec
             port:
               number: 80
-  - host: {{ .Values.hostname.wwwName }}
-    http:
-      paths:
-      - path: /
-        pathType: Prefix
-        backend:
-          service:
-            name: appsec
-            port:
-              number: 80
+    {{ end }}   
