@@ -1,4 +1,4 @@
-# hostname to publish to
+# hostnames to publish to
 hostname:
   name1: "cpdemo.win"
   name2: "www.cpdemo.win"
