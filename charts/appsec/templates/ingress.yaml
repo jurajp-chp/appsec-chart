@@ -7,11 +7,11 @@ metadata:
 spec:
  tls:
   - secretName: {{ .Values.letsencrypt.secret }}
-    hosts: |-
+    hosts:
     {{ range $alias, $hostname := .Values.hostname }}
      - host: "{{ $hostname }}"
     {{ end }}
- rules: |-
+ rules:
   {{ range $alias, $hostname := .Values.hostname }}
   - host: "{{ $hostname }}"
     http:
