@@ -9,6 +9,6 @@ cptoken:
 # Lets encrypt cluster issuer
 letsencrypt:
   # secret used to store Lets encrypt account's private key
-  secret: lets-encrypt-priviate-key
+  secret: lets-encrypt-private-key
   # Lets encrypt certificate issuer user
   email: "microk8s@example.com"
