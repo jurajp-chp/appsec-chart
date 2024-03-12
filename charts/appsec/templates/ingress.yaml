@@ -6,7 +6,7 @@ metadata:
   cert-manager.io/cluster-issuer: lets-encrypt
 spec:
  tls:
-  - secretName: appsec-ingress-cert
+  - secretName: appsec-ingress-certificate
     hosts:
     {{- range $alias, $hostname := .Values.hostname }}
      - "{{ $hostname }}"
