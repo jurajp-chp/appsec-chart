@@ -1,5 +1,0 @@
-
-Your certificate cluster issuer is ready for use:
-
-    kubectl describe clusterissuer
-
