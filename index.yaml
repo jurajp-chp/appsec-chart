@@ -3,6 +3,16 @@ entries:
   appsec:
   - apiVersion: v2
     appVersion: 1.0.1
+    created: "2024-03-14T22:37:04.732905252Z"
+    description: Simple deployment of CloudGuard WAF with HTTPS and certs
+    digest: 1533928721d06b4be10be0550ba25e4031549eef78618bb4716aae7492c62869
+    name: appsec
+    type: application
+    urls:
+    - https://github.com/jurajp-chp/appsec-chart/releases/download/appsec-0.1.23/appsec-0.1.23.tgz
+    version: 0.1.23
+  - apiVersion: v2
+    appVersion: 1.0.1
     created: "2024-03-14T22:29:25.324064906Z"
     description: Simple deployment of CloudGuard WAF with HTTPS and certs
     digest: 3259d67331259133fccf5378db7dedc3e8d0b788ae29cda5974e2d57c9c24cf7
@@ -143,4 +153,4 @@ entries:
     urls:
     - https://github.com/jurajp-chp/appsec-chart/releases/download/web-0.1.0/web-0.1.0.tgz
     version: 0.1.0
-generated: "2024-03-14T22:29:25.324120911Z"
+generated: "2024-03-14T22:37:04.733008195Z"
