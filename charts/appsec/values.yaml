@@ -1,9 +1,9 @@
 # hostnames to publish to
 hostname:
   name1: "cpdemo.win"
-  name2: "www.cpdemo.win"
-  name3: "cpdemo.online"
-  name4: "www.cpdemo.online"
+#  name2: "www.cpdemo.win"
+#  name3: "cpdemo.online"
+#  name4: "www.cpdemo.online"
 cptoken:
 
 # Lets encrypt cluster issuer
