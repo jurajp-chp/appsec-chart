@@ -68,4 +68,6 @@ spec:
       terminationGracePeriodSeconds: 30
       volumes:
       - name: certs
-        emptyDir: {}
+        # emptyDir: {}
+        secret:
+          secretName: appsec-ingress-tls
