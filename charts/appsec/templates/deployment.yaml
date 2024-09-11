@@ -38,8 +38,14 @@ spec:
         - containerPort: 80   # HTTP port
         - containerPort: 8117 # Health-check port
         volumeMounts:
+        #- name: certs
+        #  mountPath: "/etc/certs/"
         - name: certs
-          mountPath: "/etc/certs/"
+          mountPath: /etc/certs/app.pem
+          subPath: tls.crt
+        - name: certs
+          mountPath: /etc/certs/app.key
+          subPath: tls.key
         imagePullPolicy: Always
         livenessProbe:
           failureThreshold: 3
