@@ -38,7 +38,7 @@ spec:
         - containerPort: 80   # HTTP port
         - containerPort: 8117 # Health-check port
         volumeMounts:
-        - name: appsec-ingress-tls
+        - name: certs
           mountPath: "/etc/certs/"
         imagePullPolicy: Always
         livenessProbe:
